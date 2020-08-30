@@ -12,6 +12,18 @@ const INITIAL_VALUES = {
     gia9x3: 0,
     gia9x2: 0,
     gia9x1: 0,
+
+    gia11x5: 0,
+    gia11x4: 0,
+    gia11x3: 0,
+    gia11x2: 0,
+    gia11x1: 0,
+
+    gia11mathx5: 0,
+    gia11mathx4: 0,
+    gia11mathx3: 0,
+    gia11mathx2: 0,
+    gia11mathx1: 0,
 }
 
 const FormSchema = Yup.object().shape({
@@ -25,6 +37,17 @@ const FormSchema = Yup.object().shape({
     gia9x3: Yup.number(),
     gia9x2: Yup.number(),
     gia9x1: Yup.number(),
+
+    gia11x4: Yup.number(),
+    gia11x3: Yup.number(),
+    gia11x2: Yup.number(),
+    gia11x1: Yup.number(),
+
+    gia11mathx4: Yup.number(),
+    gia11mathx3: Yup.number(),
+    gia11mathx2: Yup.number(),
+    gia11mathx1: Yup.number(),
+
 });
 
 export const ResultForm: React.FC = () => (
@@ -151,6 +174,230 @@ export const ResultForm: React.FC = () => (
                             </InputGroup>
                         </Div>
                     </Div>
+
+                    <Div className="row">
+                        <Div className="col-md-6">
+                            Результаты ГИА - 11
+                        </Div>
+                        <Div className="col-md-6">
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "100-83"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia11x5"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x5}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "82-73"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x4"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x4}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "72-63"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x3"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x3}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "62-53"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x2"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x2}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "52-40"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x1"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x1}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+
+                    <Div className="row">
+                        <Div className="col-md-6">
+                            Результаты ГИА-11 Математика (профиль)
+                        </Div>
+                        <Div className="col-md-6">
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "100-80"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia11mathx5"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia11mathx5}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "82-73"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia11mathx4"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x4}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "72-63"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x3"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x3}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "62-53"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x2"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x2}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "52-40"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x1"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x1}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+
+                    <Div className="row">
+                        <Div className="col-md-6">
+                            Результаты ГИА - 11
+                        </Div>
+                        <Div className="col-md-6">
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "100-83"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia11x5"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x5}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "82-73"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x4"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x4}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "72-63"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x3"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x3}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "62-53"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x2"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x2}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "52-40"</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="text"
+                                    name="gia9x1"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gia9x1}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+
+
 
                     <Button type='submit'>
                         Submit
