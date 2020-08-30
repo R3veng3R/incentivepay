@@ -3,6 +3,11 @@ import {Field, Formik, Form as FormikForm} from 'formik';
 import * as Yup from 'yup';
 import {Button, Form, FormControl, InputGroup} from "react-bootstrap";
 import {Div, ErrorDiv} from "../../pages/styles/home-styles";
+import {FormDTO} from "../../types";
+
+type ResultFormProps = {
+    onSubmit: (formDTO: FormDTO) => void;
+}
 
 const INITIAL_VALUES = {
     name: '',
@@ -27,13 +32,17 @@ const FormSchema = Yup.object().shape({
     gia9x1: Yup.number(),
 });
 
-export const ResultForm: React.FC = () => (
+export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
     <>
         <Formik
             initialValues={INITIAL_VALUES}
             validationSchema={FormSchema}
             onSubmit={values => {
-                console.log(values);
+
+                onSubmit({
+                    name: values.name,
+                    lastName: values.lastName
+                });
             }}
         >
             {({
