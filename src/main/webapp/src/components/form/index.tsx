@@ -56,8 +56,16 @@ const INITIAL_VALUES = {
     MSKStudyOlimpWinner: 0,
     MSKStudyOlimpPrize: 0,
 
-    olimpMunicipalityMetodCentr: 0,
-    olimpRegionMetodCentr: 0,
+    olimpMunicipalityMetodCentrWinner: 0,
+    olimpMunicipalityMetodCentrPrize: 0,
+    olimpRegionMetodCentrWinner: 0,
+    olimpRegionMetodCentrPrize: 0,
+
+    metaInYazMunicipalityWinner: 0,
+    metaInYazMunicipalityPrize: 0,
+
+    metaInYazRegionWinner: 0,
+    metaInYazRegionPrize: 0,
 
     GTOGold:0,
     GTOSilver:0,
@@ -115,8 +123,10 @@ const FormSchema = Yup.object().shape({
     MSKStudyOlimpWinner: Yup.number(),
     MSKStudyOlimpPrize: Yup.number(),
 
-    olimpMunicipalityMetodCentr: Yup.number(),
-    olimpRegionMetodCentr: Yup.number(),
+    olimpMunicipalityMetodCentrWinner: Yup.number(),
+    olimpMunicipalityMetodCentrPrize: Yup.number(),
+    olimpRegionMetodCentrWinner: Yup.number(),
+    olimpRegionMetodCentrPrize: Yup.number(),
 
     GTOGold: Yup.number(),
     GTOSilver: Yup.number(),
@@ -743,11 +753,11 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
-                                    name="museumsParksEstatesWinner"
+                                    name="olimpMunicipalityMetodCentrWinner"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.museumsParksEstatesWinner}
+                                    value={values.olimpMunicipalityMetodCentrWinner}
                                 />
                                 {touched.gia9x5 && errors.gia9x5 ? (
                                     <ErrorDiv>{errors.gia9x5}</ErrorDiv>
@@ -759,11 +769,11 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
-                                    name="museumsParksEstatesPrize"
+                                    name="olimpMunicipalityMetodCentrPrize"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.museumsParksEstatesPrize}
+                                    value={values.olimpMunicipalityMetodCentrPrize}
                                 />
                             </InputGroup>
 
@@ -778,11 +788,11 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
-                                    name="museumsParksEstatesWinner"
+                                    name="olimpRegionMetodCentrWinner"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.museumsParksEstatesWinner}
+                                    value={values.olimpRegionMetodCentrWinner}
                                 />
                                 {touched.gia9x5 && errors.gia9x5 ? (
                                     <ErrorDiv>{errors.gia9x5}</ErrorDiv>
@@ -794,11 +804,11 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
-                                    name="museumsParksEstatesPrize"
+                                    name="olimpRegionMetodCentrPrize"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.museumsParksEstatesPrize}
+                                    value={values.olimpRegionMetodCentrPrize}
                                 />
                             </InputGroup>
 
@@ -807,7 +817,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
 
                     <Div className="row border">
                         <Div className="col-md-6">
-                            Предметные олимпиады от Городского методического центра
+                            Метапредметная викторина на иностранных языках «Московский школьник 21 века. Языки и страны» «Московский школьник 21 века»
 
 
                         </Div>
@@ -819,11 +829,11 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
-                                    name="museumsParksEstatesWinner"
+                                    name="metaInYazMunicipalityWinner"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.museumsParksEstatesWinner}
+                                    value={values.metaInYazMunicipalityWinner}
                                 />
                                 {touched.gia9x5 && errors.gia9x5 ? (
                                     <ErrorDiv>{errors.gia9x5}</ErrorDiv>
@@ -854,11 +864,11 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
-                                    name="museumsParksEstatesWinner"
+                                    name="metaInYazRegionWinner"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.museumsParksEstatesWinner}
+                                    value={values.metaInYazRegionWinner}
                                 />
                                 {touched.gia9x5 && errors.gia9x5 ? (
                                     <ErrorDiv>{errors.gia9x5}</ErrorDiv>
@@ -870,11 +880,11 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
-                                    name="museumsParksEstatesPrize"
+                                    name="metaInYazRegionPrize"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.museumsParksEstatesPrize}
+                                    value={values.metaInYazRegionPrize}
                                 />
                             </InputGroup>
 
@@ -883,7 +893,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
 
                     <Div className="row border">
                         <Div className="col-md-6">
-                            Результаты метапредметных олимпиад «Музеи. Парки. Усадьбы»
+                            Результаты участия в командных соревнованиях по любительскому спорту
 
 
                         </Div>
