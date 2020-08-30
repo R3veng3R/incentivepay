@@ -190,7 +190,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x5}
+                                    value={values.gia11x5}
                                 />
 
                             </InputGroup>
@@ -204,7 +204,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x4}
+                                    value={values.gia11x4}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -217,7 +217,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x3}
+                                    value={values.gia11x3}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -230,7 +230,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x2}
+                                    value={values.gia11x2}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -243,7 +243,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x1}
+                                    value={values.gia11x1}
                                 />
                             </InputGroup>
                         </Div>
@@ -278,7 +278,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x4}
+                                    value={values.gia11mathx4}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -287,11 +287,11 @@ export const ResultForm: React.FC = () => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
-                                    name="gia9x3"
+                                    name="gia11mathx3"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x3}
+                                    value={values.gia11mathx3}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -300,11 +300,11 @@ export const ResultForm: React.FC = () => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
-                                    name="gia9x2"
+                                    name="gia11mathx2"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x2}
+                                    value={values.gia11mathx2}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -317,7 +317,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x1}
+                                    value={values.gia11mathx1}
                                 />
                             </InputGroup>
                         </Div>
@@ -325,7 +325,7 @@ export const ResultForm: React.FC = () => (
 
                     <Div className="row">
                         <Div className="col-md-6">
-                            Результаты ГИА - 11
+                            Результаты независимого мониторинга (За каждого обучающегося, получившего:)
                         </Div>
                         <Div className="col-md-6">
                             <InputGroup size="sm" className="mb-1">
@@ -338,7 +338,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x5}
+                                    value={values.gia11mathx5}
                                 />
 
                             </InputGroup>
@@ -352,7 +352,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x4}
+                                    value={values.gia11mathx4}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -365,7 +365,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x3}
+                                    value={values.gia11mathx3}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -378,7 +378,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x2}
+                                    value={values.gia11mathx2}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -391,7 +391,7 @@ export const ResultForm: React.FC = () => (
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia9x1}
+                                    value={values.gia11mathx1}
                                 />
                             </InputGroup>
                         </Div>
