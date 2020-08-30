@@ -9,11 +9,11 @@ spring:
     hibernate:
       ddl-auto: update
 
-#  datasource:
+  #  datasource:
 #      url: jdbc:h2:file:~/h2/payments
 
   datasource:
-    url: jdbc:sqlserver://incentivepaymentsbase.database.windows.net;databaseName=paymentsdb
+    url: jdbc:sqlserver://incentivepaymentsbase.database.windows.net;databaseName=paymentsdb_realise
     username: adminsa@incentivepaymentsbase
     password: PWD3343fe3343
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
