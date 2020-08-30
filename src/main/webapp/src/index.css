@@ -13,5 +13,5 @@ code {
 }
 
 .error {
-  border: 2px solid #FF6565 !important;
+  border: 2px solid #FF6565 !important; align-content: center;
 }
