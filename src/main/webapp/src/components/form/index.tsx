@@ -56,6 +56,9 @@ const INITIAL_VALUES = {
     MSKStudyOlimpWinner: 0,
     MSKStudyOlimpPrize: 0,
 
+    olimpMunicipalityMetodCentr: 0,
+    olimpRegionMetodCentr: 0,
+
     GTOGold:0,
     GTOSilver:0,
     GTOBronze:0,
@@ -111,6 +114,9 @@ const FormSchema = Yup.object().shape({
 
     MSKStudyOlimpWinner: Yup.number(),
     MSKStudyOlimpPrize: Yup.number(),
+
+    olimpMunicipalityMetodCentr: Yup.number(),
+    olimpRegionMetodCentr: Yup.number(),
 
     GTOGold: Yup.number(),
     GTOSilver: Yup.number(),
