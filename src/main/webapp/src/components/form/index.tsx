@@ -126,6 +126,17 @@ const INITIAL_VALUES = {
     KVNfinalWinner:0,
     KVNfinalPrize:0,
 
+    teacherHightlevel:0,
+    teacherExpertlevel:0,
+
+    notteacherHightlevel:0,
+    notteacherExpertlevel:0,
+
+    fivexfive:0,
+
+    daysbefore:0,
+
+
 
 
 
@@ -1678,11 +1689,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="independentDiagnostics5"
+                                    name="teacherHightlevel"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.independentDiagnostics5}
+                                    value={values.teacherHightlevel}
                                 />
 
                             </InputGroup>
@@ -1692,14 +1703,90 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="independentDiagnostics4"
+                                    name="teacherExpertlevel"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.independentDiagnostics4}
+                                    value={values.teacherExpertlevel}
                                 />
                             </InputGroup>
+                        </Div>
+                    </Div>
+                    <Div className="row border">
+                        <Div className="col-md-6">
+                            Результаты прохождения независимой диагностики по профессиональным компетенциям  педагогическими работниками  (воспитатели, логопеды, психологи, дефектологи), открывшими свой результат.
+                        </Div>
+                        <Div className="col-md-6">
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Высокий уровень </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="notteacherHightlevel"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.notteacherHightlevel}
+                                />
 
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Экспертный уровень </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="notteacherExpertlevel"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.notteacherExpertlevel}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+                    <Div className="row border">
+                        <Div className="col-md-6">
+                            Результат участия в акции «Пять на пять»
+                        </Div>
+                        <Div className="col-md-6">
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">1 б. за каждый предмет, по которому набрано более 70 баллов</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="fivexfive"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.fivexfive}
+                                />
+
+                            </InputGroup>
+
+                        </Div>
+                    </Div>
+                    <Div className="row border">
+                        <Div className="col-md-6">
+                            Посещаемость дошкольниками образовательной организации
+                        </Div>
+                        <Div className="col-md-6">
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">кол-во дней</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="daysbefore"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.daysbefore}
+                                />
+
+                            </InputGroup>
 
                         </Div>
                     </Div>
