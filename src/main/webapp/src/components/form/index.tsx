@@ -13,11 +13,10 @@ type ResultFormProps = {
 const INITIAL_VALUES = {
     name: '',
     lastName: '',
+    middleName: '',
     gia9x5: 0,
     gia9x4: 0,
     gia9x3: 0,
-    gia9x2: 0,
-    gia9x1: 0,
 
     gia11x5: 0,
     gia11x4: 0,
@@ -76,24 +75,22 @@ const INITIAL_VALUES = {
     sportVSEROSWinner: 0,
     sportVSEROSPrize: 0,
 
-    sportGTOGold:0,
-    sportGTOSilver:0,
-    sportGTOBronze:0,
+    sportGTOGold: 0,
+    sportGTOSilver: 0,
+    sportGTOBronze: 0,
 
-    abilimpiksOtborWinner:0,
-    abilimpiksOtborPrize:0,
+    abilimpiksOtborWinner: 0,
+    abilimpiksOtborPrize: 0,
 
-    abilimpiksGorodWinner:0,
-    abilimpiksGorodPrize:0,
-    abilimpiksGorodInstock:0,
+    abilimpiksGorodWinner: 0,
+    abilimpiksGorodPrize: 0,
+    abilimpiksGorodInstock: 0,
 //
-    abilimpiksVSEROSWinner:0,
-    abilimpiksVSEROSPrize:0,
-    abilimpiksVSEROSInstock:0,
+    abilimpiksVSEROSWinner: 0,
+    abilimpiksVSEROSPrize: 0,
+    abilimpiksVSEROSInstock: 0,
 
-    wordskillsVSEROSWinner:0,
-
-
+    wordskillsVSEROSWinner: 0,
 
 
 }
@@ -102,6 +99,8 @@ const FormSchema = Yup.object().shape({
     name: Yup.string()
         .required('Обязательное поле'),
     lastName: Yup.string()
+        .required('Обязательное поле'),
+    middleName: Yup.string()
         .required('Обязательное поле'),
     gia9x5: Yup.number()
         .typeError('Должен быть номер'),
@@ -169,7 +168,7 @@ const FormSchema = Yup.object().shape({
 
 });
 
-export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
+export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
     <>
         <Formik
             initialValues={INITIAL_VALUES}
@@ -190,22 +189,6 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                   handleBlur, handleSubmit,
               }) => (
                 <FormikForm>
-                    <Form.Group controlId="formName">
-                        <Form.Label>Имя :</Form.Label>
-                        <Form.Control
-                            type="text"
-                            name="name"
-                            placeholder="Имя"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.name}
-                            className={touched.name && errors.name ? "error" : ""}
-                        />
-                        {touched.name && errors.name ? (
-                            <ErrorDiv>{errors.name}</ErrorDiv>
-                        ) : null}
-                    </Form.Group>
-
                     <Form.Group controlId="formLastName">
                         <Form.Label>Фамилия :</Form.Label>
                         <Form.Control
@@ -222,7 +205,39 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                         ) : null}
                     </Form.Group>
 
-                    <Div className="row border">
+                    <Form.Group controlId="formName">
+                        <Form.Label>Имя :</Form.Label>
+                        <Form.Control
+                            type="text"
+                            name="name"
+                            placeholder="Имя"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.name}
+                            className={touched.name && errors.name ? "error" : ""}
+                        />
+                        {touched.name && errors.name ? (
+                            <ErrorDiv>{errors.name}</ErrorDiv>
+                        ) : null}
+                    </Form.Group>
+
+                    <Form.Group controlId="formMiddleName">
+                        <Form.Label>Отчество :</Form.Label>
+                        <Form.Control
+                            type="text"
+                            name="middleName"
+                            placeholder="Отчество"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.name}
+                            className={touched.middleName && errors.middleName ? "error" : ""}
+                        />
+                        {touched.middleName && errors.middleName ? (
+                            <ErrorDiv>{errors.middleName}</ErrorDiv>
+                        ) : null}
+                    </Form.Group>
+
+                    <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
                             Результаты ГИА - 9
                         </Div>
@@ -269,36 +284,10 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     value={values.gia9x3}
                                 />
                             </InputGroup>
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Оценка "2"</InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="number"
-                                    name="gia9x2"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.gia9x2}
-                                />
-                            </InputGroup>
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Оценка "1"</InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="number"
-                                    name="gia9x1"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.gia9x1}
-                                />
-                            </InputGroup>
                         </Div>
                     </Div>
 
-                    <Div className="row border">
+                    <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
                             Результаты ГИА - 11
                         </Div>
@@ -372,7 +361,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                         </Div>
                     </Div>
 
-                    <Div className="row border">
+                    <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
                             Результаты ГИА-11 Математика (профиль)
                         </Div>
@@ -446,7 +435,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                         </Div>
                     </Div>
 
-                    <Div className="row border">
+                    <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
                             Результаты независимого мониторинга (За каждого обучающегося, получившего:)
                         </Div>
@@ -495,123 +484,126 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                         </Div>
                     </Div>
 
-                    <Div className="row border">
-                        <Div className="col-md-6">
-                            Результаты Всероссийской олимпиады школьников
 
+                    <Div className="row border mb-2 p-2">
+                        <Div className="col-md-12">
+                            <Div className="row">
+                                <Div className="col-md-6">
+                                    Результаты Всероссийской олимпиады школьников
+                                </Div>
+                                <Div className="col-md-6">
+                                    Муниципальный этап
+                                    <InputGroup size="sm" className="mb-1">
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control
+                                            type="number"
+                                            name="VOSHMunicipalityWinner"
+                                            placeholder=""
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            value={values.VOSHMunicipalityWinner}
+                                        />
+                                        {touched.VOSHMunicipalityWinner && errors.VOSHMunicipalityWinner ? (
+                                            <ErrorDiv>{errors.VOSHMunicipalityWinner}</ErrorDiv>
+                                        ) : null}
+                                    </InputGroup>
+                                    <InputGroup size="sm" className="mb-1">
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control
+                                            type="number"
+                                            name="VOSHMunicipalityPrize"
+                                            placeholder=""
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            value={values.VOSHMunicipalityPrize}
+                                        />
+                                    </InputGroup>
+                                </Div>
+                            </Div>
+
+                            <Div className="row">
+                                <Div className="col-md-6">&nbsp;</Div>
+                                <Div className="col-md-6">
+                                    Региональный этап
+                                    <InputGroup size="sm" className="mb-1">
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control
+                                            type="number"
+                                            name="VOSHRegionWinner"
+                                            placeholder=""
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            value={values.VOSHRegionWinner}
+                                        />
+                                        {touched.gia9x5 && errors.gia9x5 ? (
+                                            <ErrorDiv>{errors.gia9x5}</ErrorDiv>
+                                        ) : null}
+                                    </InputGroup>
+                                    <InputGroup size="sm" className="mb-1">
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control
+                                            type="number"
+                                            name="VOSHRegionPrize"
+                                            placeholder=""
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            value={values.VOSHRegionPrize}
+                                        />
+                                    </InputGroup>
+                                </Div>
+                            </Div>
+
+                            <Div className="row">
+                                <Div className="col-md-6">&nbsp;</Div>
+                                <Div className="col-md-6">
+                                    Заключительный этап
+                                    <InputGroup size="sm" className="mb-1">
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control
+                                            type="number"
+                                            name="VOSHWinner"
+                                            placeholder=""
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            value={values.VOSHWinner}
+                                        />
+                                        {touched.gia9x5 && errors.gia9x5 ? (
+                                            <ErrorDiv>{errors.gia9x5}</ErrorDiv>
+                                        ) : null}
+                                    </InputGroup>
+                                    <InputGroup size="sm" className="mb-1">
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control
+                                            type="number"
+                                            name="VOSHPrize"
+                                            placeholder=""
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            value={values.VOSHPrize}
+                                        />
+                                    </InputGroup>
+                                </Div>
+                            </Div>
                         </Div>
-                        <Div className="col-md-6">
-
-
-                        </Div>
-                        <Div className="col-md-6">
-                            Муниципальный этап
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="number"
-                                    name="VOSHMunicipalityWinner"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.VOSHMunicipalityWinner}
-                                />
-                                {touched.VOSHMunicipalityWinner && errors.VOSHMunicipalityWinner ? (
-                                    <ErrorDiv>{errors.VOSHMunicipalityWinner}</ErrorDiv>
-                                ) : null}
-                            </InputGroup>
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="number"
-                                    name="VOSHMunicipalityPrize"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.VOSHMunicipalityPrize}
-                                />
-                            </InputGroup>
-
-                        </Div>
-                        <Div className="col-md-6">
-                            Региональный этап
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="number"
-                                    name="VOSHRegionWinner"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.VOSHRegionWinner}
-                                />
-                                {touched.gia9x5 && errors.gia9x5 ? (
-                                    <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                ) : null}
-                            </InputGroup>
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="number"
-                                    name="VOSHRegionPrize"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.VOSHRegionPrize}
-                                />
-                            </InputGroup>
-
-                        </Div>
-                        <Div className="col-md-6 mb-2">
-                            Заключительный этап
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="number"
-                                    name="VOSHWinner"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.VOSHWinner}
-                                />
-                                {touched.gia9x5 && errors.gia9x5 ? (
-                                    <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                ) : null}
-                            </InputGroup>
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="number"
-                                    name="VOSHPrize"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.VOSHPrize}
-                                />
-                            </InputGroup>
-
-                        </Div>
-
                     </Div>
 
                     <Div className="row border">
                         <Div className="col-md-6">
                             Результаты Московской олимпиады школьников
-
-
                         </Div>
+
                         <Div className="col-md-6">
                             Региональный этап
                             <InputGroup size="sm" className="mb-1">
@@ -672,7 +664,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Команда-призер  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Команда-призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -697,7 +689,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             Региональный этап
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -713,7 +705,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm"> Призер  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm"> Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -730,9 +722,9 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
 
                     <Div className="row border">
                         <Div className="col-md-6">
-                            Московская городская исследовательская культурологическая олимпиада «История и культура храмов городов России»
+                            Московская городская исследовательская культурологическая олимпиада «История и культура
+                            храмов городов России»
                             VII Московская метапредметная олимпиада «Не прервётся связь поколений»
-
 
 
                         </Div>
@@ -782,7 +774,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             Муниципальный этап
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -817,7 +809,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             Региональный этап
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -833,7 +825,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призёр   </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призёр </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -850,7 +842,8 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
 
                     <Div className="row border">
                         <Div className="col-md-6">
-                            Метапредметная викторина на иностранных языках «Московский школьник 21 века. Языки и страны» «Московский школьник 21 века»
+                            Метапредметная викторина на иностранных языках «Московский школьник 21 века. Языки и страны»
+                            «Московский школьник 21 века»
 
 
                         </Div>
@@ -858,7 +851,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             Муниципальный этап
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -893,7 +886,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             Региональный этап
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -909,7 +902,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призёр   </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призёр </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -934,7 +927,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             Межрайонный этап
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -950,7 +943,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер   </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -967,7 +960,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             Региональный этап
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -983,7 +976,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер   </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1000,7 +993,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             Всероссийский этап
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -1016,7 +1009,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер   </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1033,7 +1026,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             ГТО
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Золотой значок   </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Золотой значок </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1046,7 +1039,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Серебряный значок    </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Серебряный значок </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1059,7 +1052,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Бронзовый значок    </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Бронзовый значок </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1098,7 +1091,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1128,7 +1121,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1141,7 +1134,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -1170,7 +1163,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1183,7 +1176,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1212,7 +1205,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1225,7 +1218,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1262,7 +1255,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1292,7 +1285,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1305,7 +1298,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1334,7 +1327,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1347,7 +1340,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1376,7 +1369,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1389,7 +1382,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник  </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="text"
@@ -1402,7 +1395,6 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                             </InputGroup>
                         </Div>
                     </Div>
-
 
 
                     <Button type='submit'>
