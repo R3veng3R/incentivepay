@@ -199,7 +199,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Оценка "5"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia9x5"
                                     placeholder=""
                                     onChange={handleChange}
@@ -215,7 +215,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Оценка "4"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia9x4"
                                     placeholder=""
                                     onChange={handleChange}
@@ -228,7 +228,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Оценка "3"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia9x3"
                                     placeholder=""
                                     onChange={handleChange}
@@ -241,7 +241,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Оценка "2"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia9x2"
                                     placeholder=""
                                     onChange={handleChange}
@@ -254,7 +254,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Оценка "1"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia9x1"
                                     placeholder=""
                                     onChange={handleChange}
@@ -275,7 +275,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Баллы "100-83"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia11x5"
                                     placeholder=""
                                     onChange={handleChange}
@@ -289,7 +289,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Баллы "82-73"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia9x4"
                                     placeholder=""
                                     onChange={handleChange}
@@ -302,7 +302,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Баллы "72-63"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia9x3"
                                     placeholder=""
                                     onChange={handleChange}
@@ -315,7 +315,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Баллы "62-53"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia9x2"
                                     placeholder=""
                                     onChange={handleChange}
@@ -328,7 +328,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Баллы "52-40"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia9x1"
                                     placeholder=""
                                     onChange={handleChange}
@@ -349,7 +349,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Баллы "100-80"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia11mathx5"
                                     placeholder=""
                                     onChange={handleChange}
@@ -363,7 +363,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Баллы "82-73"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia11mathx4"
                                     placeholder=""
                                     onChange={handleChange}
@@ -376,7 +376,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Баллы "72-63"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia11mathx3"
                                     placeholder=""
                                     onChange={handleChange}
@@ -389,7 +389,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Баллы "62-53"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia11mathx2"
                                     placeholder=""
                                     onChange={handleChange}
@@ -402,7 +402,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Баллы "52-40"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="gia11mathx1"
                                     placeholder=""
                                     onChange={handleChange}
@@ -423,7 +423,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Оценкка 5</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="independentDiagnostics5"
                                     placeholder=""
                                     onChange={handleChange}
@@ -437,7 +437,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Оценкка 4</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="independentDiagnostics4"
                                     placeholder=""
                                     onChange={handleChange}
@@ -450,7 +450,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Оценкка 3</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="independentDiagnostics3"
                                     placeholder=""
                                     onChange={handleChange}
@@ -478,7 +478,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="VOSHMunicipalityWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -494,7 +494,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="VOSHMunicipalityPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -511,7 +511,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="VOSHRegionWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -527,7 +527,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="VOSHRegionPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -544,7 +544,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="VOSHWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -560,7 +560,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="VOSHPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -586,7 +586,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="MOSHWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -602,7 +602,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призер</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="MOSHPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -626,7 +626,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Команда-победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="museumsParksEstatesWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -642,7 +642,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Команда-призер  </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="museumsParksEstatesPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -667,7 +667,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="oLimpsUniversMSKWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -683,7 +683,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm"> Призер  </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="oLimpsUniversMSKPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -709,7 +709,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="MSKStudyOlimpWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -725,7 +725,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="MSKStudyOlimpWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -752,7 +752,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="olimpMunicipalityMetodCentrWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -768,7 +768,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призёр </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="olimpMunicipalityMetodCentrPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -787,7 +787,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="olimpRegionMetodCentrWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -803,7 +803,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призёр   </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="olimpRegionMetodCentrPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -828,7 +828,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="metaInYazMunicipalityWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -844,7 +844,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призёр </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="museumsParksEstatesPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -863,7 +863,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель  </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="metaInYazRegionWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -879,7 +879,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призёр   </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="metaInYazRegionPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -903,7 +903,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Команда-победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="museumsParksEstatesWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -919,7 +919,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Команда-призер  </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="museumsParksEstatesPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -943,7 +943,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Команда-победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="museumsParksEstatesWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -959,7 +959,7 @@ export const ResultForm: React.FC<ResultFormProps> = ( { onSubmit }) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Команда-призер  </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="museumsParksEstatesPrize"
                                     placeholder=""
                                     onChange={handleChange}
