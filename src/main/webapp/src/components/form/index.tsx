@@ -270,7 +270,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             placeholder="Отчество"
                             onChange={handleChange}
                             onBlur={handleBlur}
-                            value={values.name}
+                            value={values.middleName}
                             className={touched.middleName && errors.middleName ? "error" : ""}
                         />
                         {touched.middleName && errors.middleName ? (
