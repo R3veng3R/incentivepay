@@ -25,6 +25,6 @@ public class PaymentRecordService {
             paymentRecord.setCreated(new Date());
         }
 
-        return paymentRecordRepository.save(paymentRecord);
+        return paymentRecordRepository.saveAndFlush(paymentRecord);
     }
 }
