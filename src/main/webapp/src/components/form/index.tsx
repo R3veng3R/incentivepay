@@ -90,7 +90,47 @@ const INITIAL_VALUES = {
     abilimpiksVSEROSPrize: 0,
     abilimpiksVSEROSInstock: 0,
 
-    wordskillsVSEROSWinner: 0,
+    wordskillsVSEROSWinner:0,
+    wordskillsVSEROSPrize:0,
+    wordskillsVSEROSInstock:0,
+
+    wordskillsRegionWinner:0,
+    wordskillsRegionPrize:0,
+    wordskillsRegionInstock:0,
+
+    gramotaoperatorasemifinal:0,
+
+    kadetStarWinner:0,
+    kadetStarPrize:0,
+
+    artikInStart:0,
+    artikInEnd:0,
+
+    projectSinceMunicipalityWinner:0,
+    projectSinceMunicipalityPrize:0,
+    projectSinceMunicipalityInstock:0,
+
+    projectSinceRegionWinner:0,
+    projectSinceRegionPrize:0,
+    projectSinceRegionInstock:0,
+
+    contestMunicipalityWinner:0,
+    contestMunicipalityPrize:0,
+
+    contestRegionWinner:0,
+    contestRegionPrize:0,
+
+    KVNSemifinalWinner:0,
+    KVNSemifinalPrize:0,
+
+    KVNfinalWinner:0,
+    KVNfinalPrize:0,
+
+
+
+
+
+
 
 
 }
@@ -896,9 +936,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     onBlur={handleBlur}
                                     value={values.metaInYazRegionWinner}
                                 />
-                                {touched.gia9x5 && errors.gia9x5 ? (
-                                    <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                ) : null}
+
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
@@ -937,9 +975,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     onBlur={handleBlur}
                                     value={values.sportMunicipalityWinner}
                                 />
-                                {touched.gia9x5 && errors.gia9x5 ? (
-                                    <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                ) : null}
+
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
@@ -963,23 +999,21 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="sportRegionWinner"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     value={values.sportRegionWinner}
                                 />
-                                {touched.gia9x5 && errors.gia9x5 ? (
-                                    <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                ) : null}
+
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="sportRegionPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1012,7 +1046,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="sportVSEROSPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1029,7 +1063,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Золотой значок </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="sportGTOGold"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1042,7 +1076,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Серебряный значок </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="sportGTOSilver"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1055,7 +1089,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Бронзовый значок </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="sportGTOBronze"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1080,7 +1114,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="abilimpiksOtborWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1094,7 +1128,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="abilimpiksOtborPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1111,7 +1145,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="abilimpiksOtborWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1124,7 +1158,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="abilimpiksOtborPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1153,7 +1187,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="abilimpiksGorodWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1166,7 +1200,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="abilimpiksGorodPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1179,7 +1213,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="abilimpiksGorodInstock"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1195,7 +1229,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="abilimpiksVSEROSWinner"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1208,7 +1242,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="abilimpiksVSEROSPrize"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1221,7 +1255,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
+                                    type="number"
                                     name="abilimpiksVSEROSInstock"
                                     placeholder=""
                                     onChange={handleChange}
@@ -1234,123 +1268,8 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
 
                     <Div className="row border">
                         <Div className="col-md-6">
-                            Результаты участия в чемпионате «Абилимпикс» и другие конкурсы для участия детей с ОВЗ
+                            Результаты участия во Всероссийской олимпиаде профессионального мастерства WORLD  SKILLS (JUNIOR SKILLS, KIDSKILLS)
 
-                        </Div>
-                        <Div className="col-md-6">
-                            Отборочный
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="text"
-                                    name="abilimpiksOtborWinner"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.abilimpiksOtborWinner}
-                                />
-
-                            </InputGroup>
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="text"
-                                    name="abilimpiksOtborPrize"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.abilimpiksOtborPrize}
-                                />
-                            </InputGroup>
-
-                        </Div>
-                        <Div className="col-md-6">
-                            Городской этап
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="text"
-                                    name="abilimpiksOtborWinner"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.abilimpiksOtborWinner}
-                                />
-                            </InputGroup>
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="text"
-                                    name="abilimpiksOtborPrize"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.abilimpiksOtborPrize}
-                                />
-                            </InputGroup>
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="text"
-                                    name="abilimpiksOtborPrize"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.abilimpiksOtborPrize}
-                                />
-                            </InputGroup>
-                        </Div>
-                        <Div className="col-md-6">
-                            Городской этап
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="text"
-                                    name="abilimpiksGorodWinner"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.abilimpiksGorodWinner}
-                                />
-                            </InputGroup>
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="text"
-                                    name="abilimpiksGorodPrize"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.abilimpiksGorodPrize}
-                                />
-                            </InputGroup>
-                            <InputGroup size="sm" className="mb-1">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <Form.Control
-                                    type="text"
-                                    name="abilimpiksGorodInstock"
-                                    placeholder=""
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.abilimpiksGorodInstock}
-                                />
-                            </InputGroup>
                         </Div>
                         <Div className="col-md-6">
                             Всероссийский этап
@@ -1359,12 +1278,56 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
-                                    name="abilimpiksVSEROSWinner"
+                                    type="number"
+                                    name="wordskillsVSEROSWinner"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.abilimpiksVSEROSWinner}
+                                    value={values.wordskillsVSEROSWinner}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="wordskillsVSEROSPrize"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.wordskillsVSEROSPrize}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Учасник  </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="wordskillsVSEROSInstock"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.wordskillsVSEROSInstock}
+                                />
+                            </InputGroup>
+
+                        </Div>
+                        <Div className="col-md-6">
+                            Региональный этап
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="wordskillsRegionWinner"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.wordskillsRegionWinner}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -1372,12 +1335,12 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
-                                    name="abilimpiksVSEROSPrize"
+                                    type="number"
+                                    name="wordskillsRegionWinner"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.abilimpiksVSEROSPrize}
+                                    value={values.wordskillsRegionWinner}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -1385,16 +1348,364 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="text"
-                                    name="abilimpiksVSEROSInstock"
+                                    type="number"
+                                    name="wordskillsRegionInstock"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.abilimpiksVSEROSInstock}
+                                    value={values.wordskillsRegionInstock}
+                                />
+                            </InputGroup>
+                        </Div>
+                        <Div className="col-md-6">
+                            Грамоты Оператора полуфинала
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm"> </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="gramotaoperatorasemifinal"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.gramotaoperatorasemifinal}
                                 />
                             </InputGroup>
                         </Div>
                     </Div>
+                    <Div className="row border">
+                        <Div className="col-md-6">
+                            Городской фестиваль юных талантов «Кадетская звездочка»
+                        </Div>
+                        <Div className="col-md-6">
+                            Заключительный региональный этап
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="kadetStarWinner"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.kadetStarWinner}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призёр </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="kadetStarPrize"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.kadetStarPrize}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+                    <Div className="row border">
+                        <Div className="col-md-6">
+                            Большая Арктическая экспедиция
+                        </Div>
+                        <Div className="col-md-6">
+
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">2 отборочный этап - набор в команду </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="artikInStart"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.artikInStart}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">заключительный этап </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="artikInEnd"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.artikInEnd}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+
+                    <Div className="row border">
+                        <Div className="col-md-6">
+                            Конкурсы научно-исследовательских работ и творческих проектов.
+                        </Div>
+                        <Div className="col-md-6">
+                            Муниципальный этап
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="projectSinceMunicipalityWinner"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.projectSinceMunicipalityWinner}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="projectSinceMunicipalityPrize"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.projectSinceMunicipalityPrize}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Сертификат участника (не более 3-х проектов)</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="projectSinceMunicipalityInstock"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.projectSinceMunicipalityInstock}
+                                />
+                            </InputGroup>
+                        </Div>
+                        <Div className="col-md-6">
+                            Региональный этап
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="projectSinceRegionWinner"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.projectSinceRegionWinner}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="projectSinceRegionPrize"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.projectSinceRegionPrize}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Сертификат участника (не более 3-х проектов)</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="projectSinceRegionInstock"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.projectSinceRegionInstock}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+                    <Div className="row border">
+                        <Div className="col-md-6">
+                            Московские городские конкурсные мероприятия.
+                            Проектные работы невнесённые в перечень мероприятий
+
+                        </Div>
+                        <Div className="col-md-6">
+                            Муниципальный этап
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="contestMunicipalityWinner"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.contestMunicipalityWinner}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="contestMunicipalityPrize"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.contestMunicipalityPrize}
+                                />
+                            </InputGroup>
+                        </Div>
+                        <Div className="col-md-6">
+                            Региональный этап
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="contestRegionWinner"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.contestRegionWinner}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="contestRegionPrize"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.contestRegionPrize}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+                    <Div className="row border">
+                        <Div className="col-md-6">
+                            Чемпионат игр КВН города Москвы среди команд школьников и студентов колледжей «Вернисаж профессий»
+
+                        </Div>
+                        <Div className="col-md-6">
+                            Полуфинал
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="KVNSemifinalWinner"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.KVNSemifinalWinner}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="KVNSemifinalPrize"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.KVNSemifinalPrize}
+                                />
+                            </InputGroup>
+                        </Div>
+                        <Div className="col-md-6">
+                            Финал
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="KVNfinalWinner"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.KVNfinalWinner}
+                                />
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Призер</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="KVNfinalPrize"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.KVNfinalPrize}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+                    <Div className="row border">
+                        <Div className="col-md-6">
+                            Результаты прохождения независимой диагностики учителями-предметниками (по преподаваемому предмету), открывшими свой результат (ЕГЭ)
+                        </Div>
+                        <Div className="col-md-6">
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Высокий уровень </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="independentDiagnostics5"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.independentDiagnostics5}
+                                />
+
+                            </InputGroup>
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Экспертный уровень </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="independentDiagnostics4"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.independentDiagnostics4}
+                                />
+                            </InputGroup>
+
+
+                        </Div>
+                    </Div>
+
+
+
 
 
                     <Button type='submit'>
