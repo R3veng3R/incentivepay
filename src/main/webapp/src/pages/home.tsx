@@ -21,9 +21,11 @@ export const HomePage: React.FC = () => {
 
     const onSubmitForm = async (formDTO: FormDTO) => {
         setLoading(true)
-        const result = await Api.post(`/api/payments`, formDTO);
 
-        console.log(result);
+        try {
+            const result = await Api.post(`/api/payments`, formDTO);
+        } catch (e) {}
+
         setLoading(false);
     }
 
