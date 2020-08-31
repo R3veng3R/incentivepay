@@ -1,10 +1,12 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {PageWrapper} from "./styles/home-styles";
 import {ResultForm} from "../components/form";
 import Api from "../utils/Api";
 import {FormDTO} from "../types";
+import {Loader} from "../components/loader";
 
 export const HomePage: React.FC = () => {
+    const [isLoading, setLoading] = useState<boolean>(false);
 
     useEffect( () => {
 
@@ -18,13 +20,18 @@ export const HomePage: React.FC = () => {
     }
 
     const onSubmitForm = async (formDTO: FormDTO) => {
-        const result = await Api.post(`/api/payments`, formDTO);
+        setLoading(true)
 
-        console.log(result);
+        try {
+            const result = await Api.post(`/api/payments`, formDTO);
+        } catch (e) {}
+
+        setLoading(false);
     }
 
     return (
         <PageWrapper>
+            <Loader isHidden={!isLoading}/>
             <ResultForm onSubmit={onSubmitForm}/>
         </PageWrapper>
     )
