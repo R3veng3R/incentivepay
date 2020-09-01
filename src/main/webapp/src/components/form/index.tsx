@@ -1831,7 +1831,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                         ) : null}
                     </Form.Group>
 
-                    <Div className="row center">
+                    <Div className="row center justify-content-center">
                         <Button type='submit' >
                             Отправить
                         </Button>
