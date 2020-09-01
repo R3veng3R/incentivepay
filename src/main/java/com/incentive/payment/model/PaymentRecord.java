@@ -59,8 +59,8 @@ public class PaymentRecord {
     private String museumsParksEstatesWinner;
     private String museumsParksEstatesPrize;
 
-    private String olimpsUniversMskWinner;
-    private String olimpsUniversMskPrize;
+    private String olimpsUniversmskWinner;
+    private String olimpsUniversmskPrize;
 
     private String mskStudyOlimpWinner;
     private String mskStudyOlimpPrize;
