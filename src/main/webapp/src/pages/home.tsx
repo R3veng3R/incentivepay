@@ -2,8 +2,8 @@ import React, {useEffect, useState} from "react";
 import {PageWrapper} from "./styles/home-styles";
 import {ResultForm} from "../components/form";
 import Api from "../utils/Api";
-import {FormDTO} from "../types";
 import {Loader} from "../components/loader";
+import {FormikValues} from "formik";
 
 export const HomePage: React.FC = () => {
     const [isLoading, setLoading] = useState<boolean>(false);
@@ -19,11 +19,11 @@ export const HomePage: React.FC = () => {
         return await Api.get(`/api/payments`);
     }
 
-    const onSubmitForm = async (formDTO: FormDTO) => {
+    const onSubmitForm = async (values: FormikValues) => {
         setLoading(true)
 
         try {
-            const result = await Api.post(`/api/payments`, formDTO);
+            const result = await Api.post(`/api/payments`, values);
         } catch (e) {}
 
         setLoading(false);

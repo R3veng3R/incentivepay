@@ -21,5 +21,128 @@ public class PaymentRecord {
     private Long id;
     private String name;
     private String lastName;
+    private String middleName;
     private Date created;
+
+    private String gia9x5;
+    private String gia9x4;
+    private String gia9x3;
+
+    private String gia11x100;
+    private String gia11x82;
+    private String gia11x72;
+    private String gia11x62;
+    private String gia11x52;
+
+    private String gia11mathx100;
+    private String gia11mathx79;
+    private String gia11mathx64;
+    private String gia11mathx35;
+    private String gia11mathx30;
+
+    private String independentDiagnostics5;
+    private String independentDiagnostics4;
+    private String independentDiagnostics3;
+
+    private String VOSHMunicipalityWinner;
+    private String VOSHMunicipalityPrize;
+
+    private String VOSHRegionWinner;
+    private String VOSHRegionPrize;
+
+    private String VOSHWinner;
+    private String VOSHPrize;
+
+    private String MOSHWinner;
+    private String MOSHPrize;
+
+    private String museumsParksEstatesWinner;
+    private String museumsParksEstatesPrize;
+
+    private String oLimpsUniversMSKWinner;
+    private String oLimpsUniversMSKPrize;
+
+    private String MSKStudyOlimpWinner;
+    private String MSKStudyOlimpPrize;
+
+    private String olimpMunicipalityMetodCentrWinner;
+    private String olimpMunicipalityMetodCentrPrize;
+    private String olimpRegionMetodCentrWinner;
+    private String olimpRegionMetodCentrPrize;
+
+    private String metaInYazMunicipalityWinner;
+    private String metaInYazMunicipalityPrize;
+
+    private String metaInYazRegionWinner;
+    private String metaInYazRegionPrize;
+
+    private String sportMunicipalityWinner;
+    private String sportMunicipalityPrize;
+
+    private String sportRegionWinner;
+    private String sportRegionPrize;
+
+    private String  sportVSEROSWinner;
+    private String sportVSEROSPrize;
+
+    private String sportGTOGold;
+    private String sportGTOSilver;
+    private String sportGTOBronze;
+
+    private String abilimpiksOtborWinner;
+    private String abilimpiksOtborPrize;
+
+    private String abilimpiksGorodWinner;
+    private String abilimpiksGorodPrize;
+    private String abilimpiksGorodInstock;
+
+    private String abilimpiksVSEROSWinner;
+    private String abilimpiksVSEROSPrize;
+    private String abilimpiksVSEROSInstock;
+
+    private String wordskillsVSEROSWinner;
+    private String wordskillsVSEROSPrize;
+    private String wordskillsVSEROSInstock;
+
+    private String wordskillsRegionWinner;
+    private String wordskillsRegionPrize;
+    private String wordskillsRegionInstock;
+
+    private String gramotaoperatorasemifinal;
+
+    private String kadetStarWinner;
+    private String kadetStarPrize;
+
+    private String artikInStart;
+    private String artikInEnd;
+
+    private String projectSinceMunicipalityWinner;
+    private String projectSinceMunicipalityPrize;
+    private String projectSinceMunicipalityInstock;
+
+    private String projectSinceRegionWinner;
+    private String projectSinceRegionPrize;
+    private String projectSinceRegionInstock;
+
+    private String contestMunicipalityWinner;
+    private String contestMunicipalityPrize;
+
+    private String contestRegionWinner;
+    private String contestRegionPrize;
+
+    private String KVNSemifinalWinner;
+    private String KVNSemifinalPrize;
+
+    private String KVNfinalWinner;
+    private String KVNfinalPrize;
+
+    private String teacherHightlevel;
+    private String teacherExpertlevel;
+
+    private String notteacherHightlevel;
+    private String notteacherExpertlevel;
+
+    private String fivexfive;
+    private String daysbefore;
+    private String linkString;
 }

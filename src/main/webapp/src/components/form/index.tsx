@@ -1,12 +1,11 @@
 import React from 'react';
-import {Field, Formik, Form as FormikForm} from 'formik';
+import {Field, Formik, Form as FormikForm, FormikValues} from 'formik';
 import * as Yup from 'yup';
 import {Button, Form, FormControl, InputGroup} from "react-bootstrap";
 import {Div, ErrorDiv} from "../../pages/styles/home-styles";
-import {FormDTO} from "../../types";
 
 type ResultFormProps = {
-    onSubmit: (formDTO: FormDTO) => void;
+    onSubmit: (values: FormikValues) => void;
 }
 
 
@@ -273,14 +272,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
         <Formik
             initialValues={INITIAL_VALUES}
             validationSchema={FormSchema}
-            onSubmit={values => {
-
-                onSubmit({
-                    name: values.name,
-                    lastName: values.lastName
-                });
-            }}
-        >
+            onSubmit={ values => onSubmit(values)}>
             {({
                   values,
                   errors,
