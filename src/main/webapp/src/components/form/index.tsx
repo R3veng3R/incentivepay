@@ -48,8 +48,8 @@ const INITIAL_VALUES = {
     museumsParksEstatesWinner: 0,
     museumsParksEstatesPrize: 0,
 
-    oLimpsUniversMSKWinner: 0,
-    oLimpsUniversMSKPrize: 0,
+    olimpsUniversMSKWinner: 0,
+    olimpsUniversMSKPrize: 0,
 
     mskStudyOlimpWinner: 0,
     mskStudyOlimpPrize: 0,
@@ -183,8 +183,8 @@ const FormSchema = Yup.object().shape({
     museumsParksEstatesWinner: Yup.number(),
     museumsParksEstatesPrize: Yup.number(),
 
-    oLimpsUniversMSKWinner: Yup.number(),
-    oLimpsUniversMSKPrize: Yup.number(),
+    olimpsUniversMSKWinner: Yup.number(),
+    olimpsUniversMSKPrize: Yup.number(),
 
     mskStudyOlimpWinner: Yup.number(),
     mskStudyOlimpPrize: Yup.number(),
@@ -759,11 +759,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="oLimpsUniversMSKWinner"
+                                    name="olimpsUniversMSKWinner"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.oLimpsUniversMSKWinner}
+                                    value={values.olimpsUniversMSKWinner}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -772,11 +772,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="oLimpsUniversMSKPrize"
+                                    name="olimpsUniversMSKPrize"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.oLimpsUniversMSKPrize}
+                                    value={values.olimpsUniversMSKPrize}
                                 />
                             </InputGroup>
 
