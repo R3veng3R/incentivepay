@@ -136,6 +136,8 @@ const INITIAL_VALUES = {
 
     daysbefore: 0,
 
+    linkString: ""
+
 
 }
 
@@ -295,9 +297,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     onBlur={handleBlur}
                                     value={values.gia9x5}
                                 />
-                                {touched.gia9x5 && errors.gia9x5 ? (
-                                    <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                ) : null}
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
@@ -353,7 +352,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia9x4"
+                                    name="gia11x4"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
@@ -366,7 +365,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia9x3"
+                                    name="gia11x3"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
@@ -379,7 +378,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia9x2"
+                                    name="gia11x2"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
@@ -392,7 +391,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia9x1"
+                                    name="gia11x1"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
@@ -423,7 +422,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "82-73"</InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "79-65"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -436,7 +435,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "72-63"</InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "64-36"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -449,7 +448,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "62-53"</InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "35-31"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -462,7 +461,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "52-40"</InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Баллы "30-27"</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -582,9 +581,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                             onBlur={handleBlur}
                                             value={values.VOSHRegionWinner}
                                         />
-                                        {touched.gia9x5 && errors.gia9x5 ? (
-                                            <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                        ) : null}
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
@@ -618,9 +614,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                             onBlur={handleBlur}
                                             value={values.VOSHWinner}
                                         />
-                                        {touched.gia9x5 && errors.gia9x5 ? (
-                                            <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                        ) : null}
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
@@ -659,9 +652,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     onBlur={handleBlur}
                                     value={values.MOSHWinner}
                                 />
-                                {touched.gia9x5 && errors.gia9x5 ? (
-                                    <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                ) : null}
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
@@ -687,7 +677,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                         <Div className="col-md-6">
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Команда-победитель </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Команда-победитель</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -697,13 +687,10 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     onBlur={handleBlur}
                                     value={values.museumsParksEstatesWinner}
                                 />
-                                {touched.gia9x5 && errors.gia9x5 ? (
-                                    <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                ) : null}
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">Команда-призер </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">Команда-призер</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -787,11 +774,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="MSKStudyOlimpWinner"
+                                    name="MSKStudyOlimpPrize"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.MSKStudyOlimpWinner}
+                                    value={values.MSKStudyOlimpPrize}
                                 />
                             </InputGroup>
                         </Div>
@@ -818,13 +805,10 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                             onBlur={handleBlur}
                                             value={values.olimpMunicipalityMetodCentrWinner}
                                         />
-                                        {touched.gia9x5 && errors.gia9x5 ? (
-                                            <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                        ) : null}
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Призёр </InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -854,9 +838,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                             onBlur={handleBlur}
                                             value={values.olimpRegionMetodCentrWinner}
                                         />
-                                        {touched.gia9x5 && errors.gia9x5 ? (
-                                            <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                        ) : null}
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
@@ -899,21 +880,18 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                             onBlur={handleBlur}
                                             value={values.metaInYazMunicipalityWinner}
                                         />
-                                        {touched.gia9x5 && errors.gia9x5 ? (
-                                            <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                        ) : null}
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Призёр </InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Призёр</InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="museumsParksEstatesPrize"
+                                            name="metaInYazMunicipalityPrize"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.museumsParksEstatesPrize}
+                                            value={values.metaInYazMunicipalityPrize}
                                         />
                                     </InputGroup>
                                 </Div>
@@ -1026,8 +1004,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                 </Div>
                             </Div>
-
-
                             <Div className="row">
                                 <Div className="col-md-6">&nbsp;</Div>
                                 <Div className="col-md-6">
@@ -1044,9 +1020,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                             onBlur={handleBlur}
                                             value={values.sportVSEROSWinner}
                                         />
-                                        {touched.gia9x5 && errors.gia9x5 ? (
-                                            <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                        ) : null}
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
@@ -1083,8 +1056,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Серебряный
-                                                значок </InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Серебряный значок </InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1097,8 +1069,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Бронзовый
-                                                значок </InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Бронзовый значок </InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1119,8 +1090,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                         <Div className="col-md-12">
                             <Div className="row">
                                 <Div className="col-md-6">
-                                    Результаты участия в чемпионате «Абилимпикс» и другие конкурсы для участия детей с
-                                    ОВЗ
+                                    Результаты участия в чемпионате «Абилимпикс» и другие конкурсы для участия детей с ОВЗ
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -1153,54 +1123,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                 </Div>
                             </Div>
-
-
-                            <Div className="row">
-                                <Div className="col-md-6">&nbsp;</Div>
-                                <Div className="col-md-6">
-                                    Городской этап
-                                    <InputGroup size="sm" className="mb-1">
-                                        <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Победитель </InputGroup.Text>
-                                        </InputGroup.Prepend>
-                                        <Form.Control
-                                            type="number"
-                                            name="abilimpiksOtborWinner"
-                                            placeholder=""
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            value={values.abilimpiksOtborWinner}
-                                        />
-                                    </InputGroup>
-                                    <InputGroup size="sm" className="mb-1">
-                                        <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
-                                        </InputGroup.Prepend>
-                                        <Form.Control
-                                            type="number"
-                                            name="abilimpiksOtborPrize"
-                                            placeholder=""
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            value={values.abilimpiksOtborPrize}
-                                        />
-                                    </InputGroup>
-                                    <InputGroup size="sm" className="mb-1">
-                                        <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
-                                        </InputGroup.Prepend>
-                                        <Form.Control
-                                            type="number"
-                                            name="abilimpiksOtborPrize"
-                                            placeholder=""
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            value={values.abilimpiksOtborPrize}
-                                        />
-                                    </InputGroup>
-                                </Div>
-                            </Div>
-
                             <Div className="row">
                                 <Div className="col-md-6">&nbsp;</Div>
                                 <Div className="col-md-6">
@@ -1246,7 +1168,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                 </Div>
                             </Div>
-
                             <Div className="row">
                                 <Div className="col-md-6">&nbsp;</Div>
                                 <Div className="col-md-6">
@@ -1434,7 +1355,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     onBlur={handleBlur}
                                     value={values.kadetStarWinner}
                                 />
-
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
@@ -1460,8 +1380,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                         <Div className="col-md-6">
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">2 отборочный этап - набор в
-                                        команду </InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">2 отборочный этап - набор в команду </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -1500,7 +1419,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     Муниципальный этап
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Победитель</InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1510,11 +1429,10 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                             onBlur={handleBlur}
                                             value={values.projectSinceMunicipalityWinner}
                                         />
-
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Победитель</InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Призер</InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1527,9 +1445,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Сертификат участника (не более
-                                                3-х
-                                                проектов)</InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Сертификат участника (не более 3-х проектов)</InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1549,7 +1465,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     Региональный этап
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Призер </InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Победитель</InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1562,7 +1478,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Победитель</InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Призер</InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1575,9 +1491,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Сертификат участника (не более
-                                                3-х
-                                                проектов)</InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Сертификат участника кол-во(не более 3-х)</InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1859,6 +1773,20 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             </InputGroup>
                         </Div>
                     </Div>
+                    <Form.Group controlId="linkString">
+                        <Form.Control
+                            type="text"
+                            name="linkString"
+                            placeholder="Ссылка на GoogleDrive/YandexDisk со сканами "
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.linkString}
+                            className={touched.linkString && errors.linkString ? "error" : ""}
+                        />
+                        {touched.linkString && errors.linkString ? (
+                            <ErrorDiv>{errors.linkString}</ErrorDiv>
+                        ) : null}
+                    </Form.Group>
 
                     <Div className="row">
                         <Button type='submit'>
