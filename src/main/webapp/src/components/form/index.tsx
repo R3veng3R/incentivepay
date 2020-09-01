@@ -392,11 +392,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia11x5"
+                                    name="gia11x100"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia11x5}
+                                    value={values.gia11x100}
                                 />
 
                             </InputGroup>
@@ -406,11 +406,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia11x4"
+                                    name="gia11x82"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia11x4}
+                                    value={values.gia11x82}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -419,11 +419,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia11x3"
+                                    name="gia11x72"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia11x3}
+                                    value={values.gia11x72}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -432,11 +432,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia11x2"
+                                    name="gia11x62"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia11x2}
+                                    value={values.gia11x62}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -445,11 +445,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia11x1"
+                                    name="gia11x52"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia11x1}
+                                    value={values.gia11x52}
                                 />
                             </InputGroup>
                         </Div>
@@ -466,13 +466,12 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia11mathx5"
+                                    name="gia11mathx100"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia11mathx5}
+                                    value={values.gia11mathx100}
                                 />
-
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
@@ -480,11 +479,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia11mathx4"
+                                    name="gia11mathx79"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia11mathx4}
+                                    value={values.gia11mathx79}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -493,11 +492,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia11mathx3"
+                                    name="gia11mathx64"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia11mathx3}
+                                    value={values.gia11mathx64}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -506,11 +505,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia11mathx2"
+                                    name="gia11mathx35"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia11mathx2}
+                                    value={values.gia11mathx35}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -519,11 +518,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="gia11mathx1"
+                                    name="gia11mathx30"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.gia11mathx1}
+                                    value={values.gia11mathx30}
                                 />
                             </InputGroup>
                         </Div>
@@ -531,7 +530,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
 
                     <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
-                            Результаты независимого мониторинга (За каждого обучающегося, получившего:)
+                            Результаты независимого мониторинга (За каждого обучающегося, получившего)
                         </Div>
                         <Div className="col-md-6">
                             <InputGroup size="sm" className="mb-1">
@@ -546,7 +545,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     onBlur={handleBlur}
                                     value={values.independentDiagnostics5}
                                 />
-
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
@@ -574,16 +572,15 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     value={values.independentDiagnostics3}
                                 />
                             </InputGroup>
-
                         </Div>
                     </Div>
-
 
                     <Div className="row border mb-2 p-2">
                         <Div className="col-md-12">
                             <Div className="row">
                                 <Div className="col-md-6">
                                     Результаты Всероссийской олимпиады школьников
+                                    <p><strong>8</strong></p>
                                 </Div>
                                 <Div className="col-md-6">
                                     Муниципальный этап
@@ -599,9 +596,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                             onBlur={handleBlur}
                                             value={values.VOSHMunicipalityWinner}
                                         />
-                                        {touched.VOSHMunicipalityWinner && errors.VOSHMunicipalityWinner ? (
-                                            <ErrorDiv>{errors.VOSHMunicipalityWinner}</ErrorDiv>
-                                        ) : null}
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
@@ -777,9 +771,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     onBlur={handleBlur}
                                     value={values.oLimpsUniversMSKWinner}
                                 />
-                                {touched.gia9x5 && errors.gia9x5 ? (
-                                    <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                ) : null}
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
@@ -818,9 +809,6 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     onBlur={handleBlur}
                                     value={values.MSKStudyOlimpWinner}
                                 />
-                                {touched.gia9x5 && errors.gia9x5 ? (
-                                    <ErrorDiv>{errors.gia9x5}</ErrorDiv>
-                                ) : null}
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
@@ -1209,7 +1197,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Участник </InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1254,7 +1242,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Участник </InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1309,7 +1297,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Участник </InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1355,7 +1343,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Учасник </InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Участник </InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
@@ -1639,9 +1627,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                         <Div className="col-md-12">
                             <Div className="row">
                                 <Div className="col-md-6">
-                                    Чемпионат игр КВН города Москвы среди команд школьников и студентов колледжей
-                                    «Вернисаж
-                                    профессий»
+                                    Чемпионат игр КВН города Москвы среди команд школьников и студентов колледжей «Вернисаж профессий»
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -1722,9 +1708,9 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Высокий уровень </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="number"
+                                    type="text"
                                     name="teacherHightlevel"
-                                    placeholder=""
+                                    placeholder="Да/Нет"
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     value={values.teacherHightlevel}
@@ -1736,9 +1722,9 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Экспертный уровень </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="number"
+                                    type="text"
                                     name="teacherExpertlevel"
-                                    placeholder=""
+                                    placeholder="Да/Нет"
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     value={values.teacherExpertlevel}
@@ -1760,9 +1746,9 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Высокий уровень </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="number"
+                                    type="text"
                                     name="notteacherHightlevel"
-                                    placeholder=""
+                                    placeholder="Да/Нет"
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     value={values.notteacherHightlevel}
@@ -1773,9 +1759,9 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     <InputGroup.Text id="inputGroup-sizing-sm">Экспертный уровень </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
-                                    type="number"
+                                    type="text"
                                     name="notteacherExpertlevel"
-                                    placeholder=""
+                                    placeholder="Да/Нет"
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     value={values.notteacherExpertlevel}
@@ -1791,8 +1777,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                         <Div className="col-md-6">
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">1 б. за каждый предмет, по которому
-                                        набрано более 70 баллов</InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">кол-во по которому набрано более 70 баллов</InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -1842,8 +1827,8 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                         ) : null}
                     </Form.Group>
 
-                    <Div className="row">
-                        <Button type='submit'>
+                    <Div className="row center">
+                        <Button type='submit' >
                             Отправить
                         </Button>
                     </Div>
