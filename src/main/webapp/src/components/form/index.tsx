@@ -33,17 +33,17 @@ const INITIAL_VALUES = {
     independentDiagnostics4: 0,
     independentDiagnostics3: 0,
 
-    VOSHMunicipalityWinner: 0,
-    VOSHMunicipalityPrize: 0,
+    voshMunicipalityWinner: 0,
+    voshMunicipalityPrize: 0,
 
-    VOSHRegionWinner: 0,
-    VOSHRegionPrize: 0,
+    voshRegionWinner: 0,
+    voshRegionPrize: 0,
 
-    VOSHWinner: 0,
-    VOSHPrize: 0,
+    voshWinner: 0,
+    voshPrize: 0,
 
-    MOSHWinner: 0,
-    MOSHPrize: 0,
+    moshWinner: 0,
+    moshPrize: 0,
 
     museumsParksEstatesWinner: 0,
     museumsParksEstatesPrize: 0,
@@ -51,8 +51,8 @@ const INITIAL_VALUES = {
     oLimpsUniversMSKWinner: 0,
     oLimpsUniversMSKPrize: 0,
 
-    MSKStudyOlimpWinner: 0,
-    MSKStudyOlimpPrize: 0,
+    mskStudyOlimpWinner: 0,
+    mskStudyOlimpPrize: 0,
 
     olimpMunicipalityMetodCentrWinner: 0,
     olimpMunicipalityMetodCentrPrize: 0,
@@ -119,11 +119,11 @@ const INITIAL_VALUES = {
     contestRegionWinner: 0,
     contestRegionPrize: 0,
 
-    KVNSemifinalWinner: 0,
-    KVNSemifinalPrize: 0,
+    kvnSemifinalWinner: 0,
+    kvnSemifinalPrize: 0,
 
-    KVNfinalWinner: 0,
-    KVNfinalPrize: 0,
+    kvnfinalWinner: 0,
+    kvnfinalPrize: 0,
 
     teacherHightlevel: "",
     teacherExpertlevel: "",
@@ -135,7 +135,7 @@ const INITIAL_VALUES = {
 
     daysbefore: 0,
 
-    linkString: ""
+    link: ""
 
 
 }
@@ -147,8 +147,8 @@ const FormSchema = Yup.object().shape({
         .required('Обязательное поле'),
     middleName: Yup.string()
         .required('Обязательное поле'),
-    gia9x5: Yup.number()
-        .typeError('Должен быть номер'),
+
+    gia9x5: Yup.number(),
     gia9x4: Yup.number(),
     gia9x3: Yup.number(),
     gia9x2: Yup.number(),
@@ -168,17 +168,17 @@ const FormSchema = Yup.object().shape({
     independentDiagnostics4: Yup.number(),
     independentDiagnostics3: Yup.number(),
 
-    VOSHMunicipalityWinner: Yup.number(),
-    VOSHMunicipalityPrize: Yup.number(),
+    voshMunicipalityWinner: Yup.number(),
+    voshMunicipalityPrize: Yup.number(),
 
-    VOSHRegionWinner: Yup.number(),
-    VOSHRegionPrize: Yup.number(),
+    voshRegionWinner: Yup.number(),
+    voshRegionPrize: Yup.number(),
 
-    VOSHWinner: Yup.number(),
-    VOSHPrize: Yup.number(),
+    voshWinner: Yup.number(),
+    voshPrize: Yup.number(),
 
-    MOSHWinner: Yup.number(),
-    MOSHPrize: Yup.number(),
+    moshWinner: Yup.number(),
+    moshPrize: Yup.number(),
 
     museumsParksEstatesWinner: Yup.number(),
     museumsParksEstatesPrize: Yup.number(),
@@ -186,8 +186,8 @@ const FormSchema = Yup.object().shape({
     oLimpsUniversMSKWinner: Yup.number(),
     oLimpsUniversMSKPrize: Yup.number(),
 
-    MSKStudyOlimpWinner: Yup.number(),
-    MSKStudyOlimpPrize: Yup.number(),
+    mskStudyOlimpWinner: Yup.number(),
+    mskStudyOlimpPrize: Yup.number(),
 
     olimpMunicipalityMetodCentrWinner: Yup.number(),
     olimpMunicipalityMetodCentrPrize: Yup.number(),
@@ -245,11 +245,11 @@ const FormSchema = Yup.object().shape({
     contestRegionWinner:  Yup.number(),
     contestRegionPrize:  Yup.number(),
 
-    KVNSemifinalWinner:  Yup.number(),
-    KVNSemifinalPrize:  Yup.number(),
+    kvnSemifinalWinner:  Yup.number(),
+    kvnSemifinalPrize:  Yup.number(),
 
-    KVNfinalWinner:  Yup.number(),
-    KVNfinalPrize:  Yup.number(),
+    kvnfinalWinner:  Yup.number(),
+    kvnfinalPrize:  Yup.number(),
 
     teacherHightlevel: Yup.string(),
     teacherExpertlevel: Yup.string(),
@@ -261,7 +261,8 @@ const FormSchema = Yup.object().shape({
 
     daysbefore: Yup.number(),
 
-    linkString: Yup.string(),
+    link: Yup.string()
+        .required('Обязательное поле'),
 
 
 
@@ -582,11 +583,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="VOSHMunicipalityWinner"
+                                            name="voshMunicipalityWinner"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.VOSHMunicipalityWinner}
+                                            value={values.voshMunicipalityWinner}
                                         />
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
@@ -595,11 +596,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="VOSHMunicipalityPrize"
+                                            name="voshMunicipalityPrize"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.VOSHMunicipalityPrize}
+                                            value={values.voshMunicipalityPrize}
                                         />
                                     </InputGroup>
                                 </Div>
@@ -615,11 +616,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="VOSHRegionWinner"
+                                            name="voshRegionWinner"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.VOSHRegionWinner}
+                                            value={values.voshRegionWinner}
                                         />
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
@@ -628,11 +629,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="VOSHRegionPrize"
+                                            name="voshRegionPrize"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.VOSHRegionPrize}
+                                            value={values.voshRegionPrize}
                                         />
                                     </InputGroup>
                                 </Div>
@@ -648,11 +649,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="VOSHWinner"
+                                            name="voshWinner"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.VOSHWinner}
+                                            value={values.voshWinner}
                                         />
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
@@ -661,11 +662,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="VOSHPrize"
+                                            name="voshPrize"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.VOSHPrize}
+                                            value={values.voshPrize}
                                         />
                                     </InputGroup>
                                 </Div>
@@ -676,8 +677,8 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                     <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
                             Результаты Московской олимпиады школьников
+                            <p><strong>9</strong></p>
                         </Div>
-
                         <Div className="col-md-6">
                             Региональный этап
                             <InputGroup size="sm" className="mb-1">
@@ -686,11 +687,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="MOSHWinner"
+                                    name="moshWinner"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.MOSHWinner}
+                                    value={values.moshWinner}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -699,11 +700,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="MOSHPrize"
+                                    name="moshPrize"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.MOSHPrize}
+                                    value={values.moshPrize}
                                 />
                             </InputGroup>
                         </Div>
@@ -712,8 +713,8 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                     <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
                             Результаты метапредметных олимпиад «Музеи. Парки. Усадьбы»
+                            <p><strong>12</strong></p>
                         </Div>
-
                         <Div className="col-md-6">
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
@@ -747,6 +748,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                     <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
                             Олимпиады организованные ВУЗами г. Москва
+                            <p><strong>7,96</strong></p>
                         </Div>
 
                         <Div className="col-md-6">
@@ -786,6 +788,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             Московская городская исследовательская культурологическая олимпиада «История и культура
                             храмов городов России»
                             VII Московская метапредметная олимпиада «Не прервётся связь поколений»
+                            <p><strong>15,17</strong></p>
                         </Div>
 
                         <Div className="col-md-6">
@@ -795,11 +798,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="MSKStudyOlimpWinner"
+                                    name="mskStudyOlimpWinner"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.MSKStudyOlimpWinner}
+                                    value={values.mskStudyOlimpWinner}
                                 />
                             </InputGroup>
                             <InputGroup size="sm" className="mb-1">
@@ -808,11 +811,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
-                                    name="MSKStudyOlimpPrize"
+                                    name="mskStudyOlimpPrize"
                                     placeholder=""
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    value={values.MSKStudyOlimpPrize}
+                                    value={values.mskStudyOlimpPrize}
                                 />
                             </InputGroup>
                         </Div>
@@ -823,6 +826,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             <Div className="row">
                                 <Div className="col-md-6">
                                     Предметные олимпиады от Городского методического центра
+                                    <p><strong>13,14,95,98,101</strong></p>
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -898,6 +902,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     Метапредметная викторина на иностранных языках «Московский школьник 21 века. Языки и
                                     страны»
                                     «Московский школьник 21 века»
+                                    <p><strong>64,97</strong></p>
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -1125,6 +1130,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             <Div className="row">
                                 <Div className="col-md-6">
                                     Результаты участия в чемпионате «Абилимпикс» и другие конкурсы для участия детей с ОВЗ
+                                    <p><strong>5,70,71</strong></p>
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -1257,6 +1263,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     Результаты участия во Всероссийской олимпиаде профессионального мастерства WORLD
                                     SKILLS
                                     (JUNIOR SKILLS, KIDSKILLS)
+                                    <p><strong>1,2,3,4</strong></p>
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -1326,11 +1333,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="wordskillsRegionWinner"
+                                            name="wordskillsRegionPrize"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.wordskillsRegionWinner}
+                                            value={values.wordskillsRegionPrize}
                                         />
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
@@ -1374,6 +1381,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                     <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
                             Городской фестиваль юных талантов «Кадетская звездочка»
+                            <p><strong>57</strong></p>
                         </Div>
                         <Div className="col-md-6">
                             Заключительный региональный этап
@@ -1409,6 +1417,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                     <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
                             Большая Арктическая экспедиция
+                            <p><strong>43</strong></p>
                         </Div>
 
                         <Div className="col-md-6">
@@ -1446,7 +1455,8 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                         <Div className="col-md-12">
                             <Div className="row">
                                 <Div className="col-md-6">
-                                    Конкурсы научно-исследовательских работ и творческих проектов.
+                                    Конкурсы научно-исследовательских работ и творческих проектов
+                                    <p><strong>15,27,31,35,37,38,39,48,54,59,77,92,93,94</strong></p>
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -1547,6 +1557,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 <Div className="col-md-6">
                                     Московские городские конкурсные мероприятия.
                                     Проектные работы невнесённые в перечень мероприятий
+                                    <p><strong>22-26,32,35-53,58,62-66,73-91,99,100</strong></p>
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -1620,6 +1631,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             <Div className="row">
                                 <Div className="col-md-6">
                                     Чемпионат игр КВН города Москвы среди команд школьников и студентов колледжей «Вернисаж профессий»
+                                    <p><strong>65</strong></p>
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -1630,11 +1642,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="KVNSemifinalWinner"
+                                            name="kvnSemifinalWinner"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.KVNSemifinalWinner}
+                                            value={values.kvnSemifinalWinner}
                                         />
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
@@ -1643,11 +1655,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="KVNSemifinalPrize"
+                                            name="kvnSemifinalPrize"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.KVNSemifinalPrize}
+                                            value={values.kvnSemifinalPrize}
                                         />
                                     </InputGroup>
                                 </Div>
@@ -1664,11 +1676,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="KVNfinalWinner"
+                                            name="kvnfinalWinner"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.KVNfinalWinner}
+                                            value={values.kvnfinalWinner}
                                         />
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
@@ -1677,11 +1689,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
-                                            name="KVNfinalPrize"
+                                            name="kvnfinalPrize"
                                             placeholder=""
                                             onChange={handleChange}
                                             onBlur={handleBlur}
-                                            value={values.KVNfinalPrize}
+                                            value={values.kvnfinalPrize}
                                         />
                                     </InputGroup>
                                 </Div>
@@ -1804,18 +1816,18 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             </InputGroup>
                         </Div>
                     </Div>
-                    <Form.Group controlId="linkString">
+                    <Form.Group controlId="link">
                         <Form.Control
                             type="text"
                             name="linkString"
                             placeholder="Ссылка на GoogleDrive/YandexDisk со сканами конкурсами"
                             onChange={handleChange}
                             onBlur={handleBlur}
-                            value={values.linkString}
-                            className={touched.linkString && errors.linkString ? "error" : ""}
+                            value={values.link}
+                            className={touched.link && errors.link ? "error" : ""}
                         />
-                        {touched.linkString && errors.linkString ? (
-                            <ErrorDiv>{errors.linkString}</ErrorDiv>
+                        {touched.link && errors.link ? (
+                            <ErrorDiv>{errors.link}</ErrorDiv>
                         ) : null}
                     </Form.Group>
 
