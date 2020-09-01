@@ -19,11 +19,10 @@ public class PaymentRecord {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
+    private Date created;
     private String lastName;
     private String middleName;
-    private Date created;
-    private String link;
+    private String name;
 
     private String gia9x5;
     private String gia9x4;
@@ -60,8 +59,8 @@ public class PaymentRecord {
     private String museumsParksEstatesWinner;
     private String museumsParksEstatesPrize;
 
-    private String oLimpsUniversMskWinner;
-    private String oLimpsUniversMskPrize;
+    private String olimpsUniversMskWinner;
+    private String olimpsUniversMskPrize;
 
     private String mskStudyOlimpWinner;
     private String mskStudyOlimpPrize;
@@ -131,8 +130,8 @@ public class PaymentRecord {
     private String contestRegionWinner;
     private String contestRegionPrize;
 
-    private String KVNSemifinalWinner;
-    private String KVNSemifinalPrize;
+    private String kvnSemifinalWinner;
+    private String kvnSemifinalPrize;
 
     private String kvnfinalWinner;
     private String kvnfinalPrize;
@@ -145,4 +144,6 @@ public class PaymentRecord {
 
     private String fivexfive;
     private String daysbefore;
+
+    private String link;
 }
