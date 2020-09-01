@@ -18,17 +18,17 @@ const INITIAL_VALUES = {
     gia9x4: 0,
     gia9x3: 0,
 
-    gia11x5: 0,
-    gia11x4: 0,
-    gia11x3: 0,
-    gia11x2: 0,
-    gia11x1: 0,
+    gia11x100: 0,
+    gia11x82: 0,
+    gia11x72: 0,
+    gia11x62: 0,
+    gia11x52: 0,
 
-    gia11mathx5: 0,
-    gia11mathx4: 0,
-    gia11mathx3: 0,
-    gia11mathx2: 0,
-    gia11mathx1: 0,
+    gia11mathx100: 0,
+    gia11mathx79: 0,
+    gia11mathx64: 0,
+    gia11mathx35: 0,
+    gia11mathx30: 0,
 
     independentDiagnostics5: 0,
     independentDiagnostics4: 0,
@@ -210,6 +210,60 @@ const FormSchema = Yup.object().shape({
     sportGTOGold: Yup.number(),
     sportGTOSilver: Yup.number(),
     sportGTOBronze: Yup.number(),
+
+
+    abilimpiksVSEROSWinner: Yup.number(),
+    abilimpiksVSEROSPrize: Yup.number(),
+    abilimpiksVSEROSInstock: Yup.number(),
+
+    wordskillsVSEROSWinner: Yup.number(),
+    wordskillsVSEROSPrize:  Yup.number(),
+    wordskillsVSEROSInstock:  Yup.number(),
+
+    wordskillsRegionWinner:  Yup.number(),
+    wordskillsRegionPrize:  Yup.number(),
+    wordskillsRegionInstock:  Yup.number(),
+
+    gramotaoperatorasemifinal:  Yup.number(),
+
+    kadetStarWinner:  Yup.number(),
+    kadetStarPrize:  Yup.number(),
+
+    artikInStart:  Yup.number(),
+    artikInEnd:  Yup.number(),
+
+    projectSinceMunicipalityWinner:  Yup.number(),
+    projectSinceMunicipalityPrize:  Yup.number(),
+    projectSinceMunicipalityInstock:  Yup.number(),
+
+    projectSinceRegionWinner:  Yup.number(),
+    projectSinceRegionPrize:  Yup.number(),
+    projectSinceRegionInstock:  Yup.number(),
+
+    contestMunicipalityWinner:  Yup.number(),
+    contestMunicipalityPrize:  Yup.number(),
+
+    contestRegionWinner:  Yup.number(),
+    contestRegionPrize:  Yup.number(),
+
+    KVNSemifinalWinner:  Yup.number(),
+    KVNSemifinalPrize:  Yup.number(),
+
+    KVNfinalWinner:  Yup.number(),
+    KVNfinalPrize:  Yup.number(),
+
+    teacherHightlevel: Yup.string(),
+    teacherExpertlevel: Yup.string(),
+
+    notteacherHightlevel: Yup.string(),
+    notteacherExpertlevel: Yup.string(),
+
+    fivexfive: Yup.number(),
+
+    daysbefore: Yup.number(),
+
+    linkString: Yup.string(),
+
 
 
 });
