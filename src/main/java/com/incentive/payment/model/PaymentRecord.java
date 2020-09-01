@@ -23,6 +23,7 @@ public class PaymentRecord {
     private String lastName;
     private String middleName;
     private Date created;
+    private String link;
 
     private String gia9x5;
     private String gia9x4;
@@ -44,26 +45,26 @@ public class PaymentRecord {
     private String independentDiagnostics4;
     private String independentDiagnostics3;
 
-    private String VOSHMunicipalityWinner;
-    private String VOSHMunicipalityPrize;
+    private String voshMunicipalityWinner;
+    private String voshMunicipalityPrize;
 
-    private String VOSHRegionWinner;
-    private String VOSHRegionPrize;
+    private String voshRegionWinner;
+    private String voshRegionPrize;
 
-    private String VOSHWinner;
-    private String VOSHPrize;
+    private String voshWinner;
+    private String voshPrize;
 
-    private String MOSHWinner;
-    private String MOSHPrize;
+    private String moshWinner;
+    private String moshPrize;
 
     private String museumsParksEstatesWinner;
     private String museumsParksEstatesPrize;
 
-    private String oLimpsUniversMSKWinner;
-    private String oLimpsUniversMSKPrize;
+    private String oLimpsUniversMskWinner;
+    private String oLimpsUniversMskPrize;
 
-    private String MSKStudyOlimpWinner;
-    private String MSKStudyOlimpPrize;
+    private String mskStudyOlimpWinner;
+    private String mskStudyOlimpPrize;
 
     private String olimpMunicipalityMetodCentrWinner;
     private String olimpMunicipalityMetodCentrPrize;
@@ -82,7 +83,7 @@ public class PaymentRecord {
     private String sportRegionWinner;
     private String sportRegionPrize;
 
-    private String  sportVSEROSWinner;
+    private String sportVSEROSWinner;
     private String sportVSEROSPrize;
 
     private String sportGTOGold;
@@ -133,8 +134,8 @@ public class PaymentRecord {
     private String KVNSemifinalWinner;
     private String KVNSemifinalPrize;
 
-    private String KVNfinalWinner;
-    private String KVNfinalPrize;
+    private String kvnfinalWinner;
+    private String kvnfinalPrize;
 
     private String teacherHightlevel;
     private String teacherExpertlevel;
@@ -144,5 +145,4 @@ public class PaymentRecord {
 
     private String fivexfive;
     private String daysbefore;
-    private String linkString;
 }
