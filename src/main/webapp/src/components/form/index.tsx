@@ -126,11 +126,11 @@ const INITIAL_VALUES = {
     KVNfinalWinner: 0,
     KVNfinalPrize: 0,
 
-    teacherHightlevel: 0,
-    teacherExpertlevel: 0,
+    teacherHightlevel: "",
+    teacherExpertlevel: "",
 
-    notteacherHightlevel: 0,
-    notteacherExpertlevel: 0,
+    notteacherHightlevel: "",
+    notteacherExpertlevel: "",
 
     fivexfive: 0,
 
@@ -1777,7 +1777,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                         <Form.Control
                             type="text"
                             name="linkString"
-                            placeholder="Ссылка на GoogleDrive/YandexDisk со сканами "
+                            placeholder="Ссылка на GoogleDrive/YandexDisk со сканами конкурсами"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.linkString}
