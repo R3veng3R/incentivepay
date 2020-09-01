@@ -1819,7 +1819,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                     <Form.Group controlId="link">
                         <Form.Control
                             type="text"
-                            name="linkString"
+                            name="link"
                             placeholder="Ссылка на GoogleDrive/YandexDisk со сканами конкурсами"
                             onChange={handleChange}
                             onBlur={handleBlur}
