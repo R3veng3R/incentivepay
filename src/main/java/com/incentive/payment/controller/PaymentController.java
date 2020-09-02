@@ -26,6 +26,6 @@ private final PaymentRecordService paymentRecordService;
     public ResponseEntity<PaymentRecord> savePayment(@RequestBody final PaymentRecord paymentRecord) {
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(paymentRecordService.save(paymentRecord));
+                .body(paymentRecordService.saveOrUpdate(paymentRecord));
     }
 }
