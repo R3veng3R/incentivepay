@@ -40,3 +40,8 @@ test {
 war{
 	classpath = fileTree('*').exclude('**/webapp')
 }
+
+task copyWebApp(type: Copy) {
+	from 'src/main/webapp/build'
+	into 'src/main/resources/static/.'
+}

@@ -145,5 +145,8 @@ public class PaymentRecord {
     private String fivexfive;
     private String daysbefore;
 
+    private String profedunonlimit;
+    private String ovzpreschooler;
+
     private String link;
 }

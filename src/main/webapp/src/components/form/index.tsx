@@ -135,6 +135,10 @@ const INITIAL_VALUES = {
 
     daysbefore: 0,
 
+    profedunonlimit:0,
+    ovzpreschooler:0,
+
+
     link: ""
 
 
@@ -260,6 +264,9 @@ const FormSchema = Yup.object().shape({
     fivexfive: Yup.number(),
 
     daysbefore: Yup.number(),
+
+    profedunonlimit: Yup.number(),
+    ovzpreschooler: Yup.number(),
 
     link: Yup.string()
         .required('Обязательное поле'),
@@ -1489,10 +1496,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Сертификат участника (не более 3-х проектов)</InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Сертификат участника </InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
+                                            max="3"
                                             name="projectSinceMunicipalityInstock"
                                             placeholder=""
                                             onChange={handleChange}
@@ -1535,10 +1543,11 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     </InputGroup>
                                     <InputGroup size="sm" className="mb-1">
                                         <InputGroup.Prepend>
-                                            <InputGroup.Text id="inputGroup-sizing-sm">Сертификат участника кол-во(не более 3-х)</InputGroup.Text>
+                                            <InputGroup.Text id="inputGroup-sizing-sm">Сертификат участника кол-во</InputGroup.Text>
                                         </InputGroup.Prepend>
                                         <Form.Control
                                             type="number"
+                                            max="3"
                                             name="projectSinceRegionInstock"
                                             placeholder=""
                                             onChange={handleChange}
@@ -1557,7 +1566,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 <Div className="col-md-6">
                                     Московские городские конкурсные мероприятия.
                                     Проектные работы невнесённые в перечень мероприятий
-                                    <p><strong>22-26,32,35-53,58,62-66,73-91,99,100</strong></p>
+                                    <p><strong>22-26,32,35-39,41-42, 45-47, 49-53-58, 62-63 66-69,62-66,73-91,99,100</strong></p>
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -1773,15 +1782,37 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             </InputGroup>
                         </Div>
                     </Div>
-
                     <Div className="row border mb-2 p-2">
                         <Div className="col-md-6">
-                            Результат участия в акции «Пять на пять»
+                            Результаты участия в проекте «Профессиональное обучение без границ»
+                            (за каждого ребёнка, получившего свидетельство о профессии)
                         </Div>
                         <Div className="col-md-6">
                             <InputGroup size="sm" className="mb-1">
                                 <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">кол-во по которому набрано более 70 баллов</InputGroup.Text>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">кол-во </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    name="profedunonlimit"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.profedunonlimit}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+
+                    <Div className="row border mb-2 p-2">
+                        <Div className="col-md-6">
+                            Результат участия в акции «Пять на пять»
+                            (по которому набрано более 70 баллов)
+                        </Div>
+                        <Div className="col-md-6">
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">кол-во </InputGroup.Text>
                                 </InputGroup.Prepend>
                                 <Form.Control
                                     type="number"
@@ -1790,6 +1821,30 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     value={values.fivexfive}
+                                />
+                            </InputGroup>
+                        </Div>
+                    </Div>
+
+
+                    <Div className="row border mb-2 p-2">
+                        <Div className="col-md-6">
+                            Результаты работы с детьми с ОВЗ в дошкольных группах
+                            (Количество детей)
+                        </Div>
+                        <Div className="col-md-6">
+                            <InputGroup size="sm" className="mb-1">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="inputGroup-sizing-sm">кол-во </InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <Form.Control
+                                    type="number"
+                                    max="10"
+                                    name="ovzpreschooler"
+                                    placeholder=""
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={values.ovzpreschooler}
                                 />
                             </InputGroup>
                         </Div>
@@ -1820,7 +1875,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                         <Form.Control
                             type="text"
                             name="link"
-                            placeholder="Ссылка на GoogleDrive/YandexDisk со сканами конкурсами"
+                            placeholder="Ссылка на GoogleDrive/YandexDisk со сканами сертификатов и грамот"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.link}
