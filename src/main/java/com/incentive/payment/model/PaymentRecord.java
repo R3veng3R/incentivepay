@@ -84,7 +84,7 @@ public class PaymentRecord {
 
     private String sportVSEROSWinner;
     private String sportVSEROSPrize;
-
+///
     private String sportGTOGold;
     private String sportGTOSilver;
     private String sportGTOBronze;

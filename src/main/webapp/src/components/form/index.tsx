@@ -833,7 +833,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                             <Div className="row">
                                 <Div className="col-md-6">
                                     Предметные олимпиады от Городского методического центра
-                                    <p><strong>13,14,95,98,101</strong></p>
+                                    <p><strong>13,14,40,44,95,98,101</strong></p>
                                 </Div>
 
                                 <Div className="col-md-6">
@@ -1566,7 +1566,7 @@ export const ResultForm: React.FC<ResultFormProps> = ({onSubmit}) => (
                                 <Div className="col-md-6">
                                     Московские городские конкурсные мероприятия.
                                     Проектные работы невнесённые в перечень мероприятий
-                                    <p><strong>22-26,32,35-39,41-42, 45-47, 49-53-58, 62-63 66-69,62-66,73-91,99,100</strong></p>
+                                    <p><strong>22-26,32,35-39,41-42,45-47,49-53,58,62-63,66-69,62-66,73-91,99,100</strong></p>
                                 </Div>
 
                                 <Div className="col-md-6">
